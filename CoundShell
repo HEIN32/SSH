@@ -17,46 +17,17 @@ none='\e[0m'
 
 sed -i 's/#\?AllowTcpForwarding .*/AllowTcpForwarding yes/' /etc/ssh/sshd_config && sed -i 's/#\?PasswordAuthentication .*/PasswordAuthentication yes/' /etc/ssh/sshd_config && sed -i 's/#\?Banner .*/Banner \/etc\/ssh\/gcp_404/' /etc/ssh/sshd_config && /etc/init.d/ssh restart;
 echo "
-<h3><font color='red' Could Shell Server
+<h3><font color='red'>Mytel GCP SSH Public Key
 </font></h3>
+<h3><font color='red'>◈────⪧  Y.Y.P SSH Servers ⪦────◈
 
-<h3><font color='red' Public SSH Key
+
 </font></h3>" | tee /etc/ssh/gcp_404 >/dev/null
-useradd "hha26" --shell=/bin/false -M
-echo "hha26:hha26" | chpasswd
+useradd "ypp26" --shell=/bin/false -M
+echo "ypp26:ypp26" | chpasswd
 
 echo ""
 
-[[ $EUID -ne 0 ]] && echo -e "${red}Error: ${plain} You must use root user to run this script!\n" && exit 1
-
-sed -i 's/#\?AllowTcpForwarding .*/AllowTcpForwarding yes/' /etc/ssh/sshd_config && sed -i 's/#\?PasswordAuthentication .*/PasswordAuthentication yes/' /etc/ssh/sshd_config && sed -i 's/#\?Banner .*/Banner \/etc\/ssh\/gcp_404/' /etc/ssh/sshd_config && /etc/init.d/ssh restart;
-echo "$servermessage" | tee /etc/ssh/gcp_404 >/dev/null
-final=$(date "+%Y-%m-%d" -d "+$dias days")
-gui=$(date "+%d/%m/%Y" -d "+$dias days")
-pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
-useradd -e $final -M -s /bin/false -p $pass $username >/dev/null
-echo "$password" >/etc/$username
-echo "$username:$password" | chpasswd
-echo "$username $sshlimiter" >>/root/usuarios.db
-
-IP=$(wget -qO- ipv4.icanhazip.com)
-echo ""
-echo -e "\033[1;32m             ◈─────────────────────────────────◈        "
-echo -e "\033[1;32m               ©️ 🐉 Dark VPS MANAGER SCRIPT 🐉          " 
-echo -e "\033[1;32m             ◈─────────────────────────────────◈        "
-echo -e "\033[1;32m                                                         "
-echo ""
-echo -e "${red}                    ◈────⪧  SSH ACCOUNT  ⪦────◈      ${plain}"
-echo -e "\033[1;37m                                                         "
-echo ""
-echo -e "\033[1;32m             ◈─ᗚ Host / IP   • ๛  \033[1;31m$IP"
-echo -e "\033[1;32m             ◈─ᗚ Port        • ๛  \033[1;31m22"
-echo -e "\033[1;32m             ◈─ᗚ Username    • ๛  \033[1;31m$username"
-echo -e "\033[1;32m             ◈─ᗚ Password    • ๛  \033[1;31m$password"
-echo ""
-echo -e "\033[1;32m              ࿂ Login Limit   • ๛   \033[1;31m$sshlimiter"               
-echo -e "\033[1;32m              ◈ Expire Date   • ๛ \033[1;31m$gui"
-echo ""
 echo -e "${red}[-] ═────────────────────────────⪧◇⪦───────────────────────────═ [-]    ${plain}"
 echo -e "${green}                                                                       ${plain}"
 echo -e "${yellow}                      I want time to stop                             ${plain}"
