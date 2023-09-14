@@ -27,6 +27,12 @@ useradd "ypp26" --shell=/bin/false -M
 echo "ypp26:ypp26" | chpasswd
 
 echo ""
+IP=$(wget -qO- ipv4.icanhazip.com)
+
+echo -e "\033[1;32m             ◈─ᗚ Host / IP   • ๛  \033[1;31m$IP"
+echo -e "\033[1;32m             ◈─ᗚ Port        • ๛  6000"
+echo -e "\033[1;32m             ◈─ᗚ Username    • ๛  yyp26"
+echo -e "\033[1;32m             ◈─ᗚ Password    • ๛  yyp26"
 
 echo -e "${red}[-] ═────────────────────────────⪧◇⪦───────────────────────────═ [-]    ${plain}"
 echo -e "${green}                                                                       ${plain}"
