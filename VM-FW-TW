@@ -51,7 +51,11 @@ fi
 echo ""
 echo -e "${red}[-]═──────────────────⪧◇⪦─────────────────═ [-] ${plain}"
 echo -e "${green}     HCM Channel - GCP TAIWAN  SERVER           ${plain}"
-echo -e "${red}[-]═──────────────────⪧◇⪦─────────────────═ [-] ${plain}"
+echo -e "${red}[-]═──────────────────⪧◇⪦─────────────────═ [-]  ${plain}"
+echo -e "${green}          [-]═───────◇───────═[-]☁️            ${plain}"
+echo -e "${green}           Qwiklabs Labs HCMCmd                 ${plain}"
+echo -e "${green}          [-]═───────◇───────═[-]               ${plain}"
+echo -e "${green}      ›☬[•] SCRIPTS ═◇ HCMSSH ◇═ [•]☬          ${plain}"
 #else
 #  echo -e "${red} instance  ═──⪧  Firewall  ࿂ GCP TAIWAN Done  "
 #fi
