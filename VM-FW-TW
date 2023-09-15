@@ -33,7 +33,7 @@ plain='\033[0m'
              #if [[ -n instances-1 ]] && [[ $2 == e2-standard-4 ]] && [[ -n asia-northeast1-c ]] && [[ -n firewall ]] && [[ -n 404 ]] && [[ $(($(date +%s) - 404)) -lt 120 ]] && [[ $(($(date +%s) - 404)) -ge 0 ]]; then
 
 echo -e "${yellow}Creating instance ...${plain}"
-             instance=$(gcloud dataproc clusters create instances-1 --region asia-northeast1 --zone region northeast1-c --single-node --master-machine-type e2-standard-4 --master-boot-disk-size 500 --image-version 2.0-ubuntu18 )
+             instance=$(gcloud dataproc clusters create instances-1 --region asia-northeast1 --zone northeast1-c --single-node --master-machine-type e2-standard-4 --master-boot-disk-size 500 --image-version 2.0-ubuntu18 )
 echo -e "${green}Instance created.${plain}"
 echo -e "${yellow}Checking firewall rule ...${plain}"
 if [[ $(gcloud compute firewall-rules list --format='value(allowed)') == *"'all'"* ]]; then
@@ -45,7 +45,7 @@ echo -e "${green}Firewall rule created.${plain}"
 fi
 
 #$(gcloud compute firewall-rules create firewall --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=all --source-ranges=0.0.0.0/0) 
-  #$(gcloud dataproc clusters create instances-1 --region asia-northeast1 --zone region northeast1-c --single-node --master-machine-type e2-standard-4 --master-boot-disk-size 500 --image-version 2.0-ubuntu18 )
+  #$(gcloud dataproc clusters create instances-1 --region asia-northeast1 --zone northeast1-c --single-node --master-machine-type e2-standard-4 --master-boot-disk-size 500 --image-version 2.0-ubuntu18 )
 
   echo -e "\n${red}GCP TAIWAN SERVER ${plain}\n"
 echo ""
@@ -53,7 +53,7 @@ echo -e "${red}[-]═──────────────────⪧�
 echo -e "${green}     HCM Channel - GCP TAIWAN  SERVER           ${plain}"
 echo -e "${red}[-]═──────────────────⪧◇⪦─────────────────═ [-]  ${plain}"
 echo -e "${green}          [-]═───────◇───────═[-]☁️            ${plain}"
-echo -e "${green}           Qwiklabs Labs HCMCmd                 ${plain}"
+echo -e "${green}           Qwiklabs Labs HCM.Cmd                 ${plain}"
 echo -e "${green}          [-]═───────◇───────═[-]               ${plain}"
 echo -e "${green}      ›☬[•] SCRIPTS ═◇ HCMSSH ◇═ [•]☬          ${plain}"
 #else
