@@ -7,7 +7,7 @@ plain='\033[0m'
 
 # $1: instance name, $2: machine type, $3: zone, $4: firewall rule name, $5: username, $6: password, $7: message, $8: token
 # if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $8 ]] && [[ $(($(date +%s) - $8)) -lt 120 ]] && [[ $(($(date +%s) - $8)) -ge 0 ]]; then
-#if [[ -n cluster-404-m ]] && [[ $2 == e2-standard-4 ]] && [[ -n asia-southeast1-b ]] && [[ -n firewall ]] && [[ -n 404 ]] && [[ $(($(date +%s) - 404)) -lt 120 ]] && [[ $(($(date +%s) - 404)) -ge 0 ]]; then
+#if [[ -n instances-1 ]] && [[ $2 == e2-standard-4 ]] && [[ -n asia-southeast1-b ]] && [[ -n firewall ]] && [[ -n 404 ]] && [[ $(($(date +%s) - 404)) -lt 120 ]] && [[ $(($(date +%s) - 404)) -ge 0 ]]; then
 
 #echo -e "${yellow}Creating auth list ...${plain}"
 #gcloud auth list
@@ -62,8 +62,5 @@ echo -e "${green}          [-]═───────◇───────�
 echo -e "${green}      ›☬[•] SCRIPTS ═◇ HCMSSH ◇═ [•]☬          ${plain}"
 #else
 #  echo -e "${red} instance  ═──⪧  Firewall  ࿂ GCP TAIWAN Done  "
-#fi
-
-#else
 #  echo -e "${red} HCM GCP instances / Firewall Code Ran Tools Servers .${plain}"
 #fi
