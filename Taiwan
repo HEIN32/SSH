@@ -7,16 +7,19 @@ plain='\033[0m'
 
 # $1: instance name, $2: machine type, $3: zone, $4: firewall rule name, $5: username, $6: password, $7: message, $8: token
 # if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $8 ]] && [[ $(($(date +%s) - $8)) -lt 120 ]] && [[ $(($(date +%s) - $8)) -ge 0 ]]; then
-#if [[ -n instances-1 ]] && [[ $2 == e2-standard-4 ]] && [[ -n asia-southeast1-b ]] && [[ -n firewall ]] && [[ -n 404 ]] && [[ $(($(date +%s) - 404)) -lt 120 ]] && [[ $(($(date +%s) - 404)) -ge 0 ]]; then
+#if [[ -n instances-1 ]] && [[ $2 == e2-standard-4 ]] && [[ -n asia-east1-a ]] && [[ -n firewall ]] && [[ -n 404 ]] && [[ $(($(date +%s) - 404)) -lt 120 ]] && [[ $(($(date +%s) - 404)) -ge 0 ]]; then
 
-#echo -e "${yellow}Creating auth list ...${plain}"
+#echo -e "${yellow}auth list ...${plain}"
 #gcloud auth list
 
-#echo -e "${yellow}Creating config list project ...${plain}"
+#echo -e "${yellow}config list project ...${plain}"
 #gcloud config list project
 
 #echo -e "${yellow}Creating git clone ...${plain}"
-#git clone https://github.com/googlecodelabs/orchestrate-with-kubernetes.git
+#git clone https://github.com/SSH-Dark/Goould-Could.git
+
+#echo -e "${yellow}Region ...${plain}"
+#gcloud config set compute/zone asia-east1-a
 
 ##!/bin/bash
 
@@ -30,7 +33,7 @@ plain='\033[0m'
 #if [[ -n instances-1 ]] && [[ $2 == e2-standard-4 ]] && [[ -n asia-east1-a ]] && [[ -n firewall ]] && [[ -n 404 ]] && [[ $(($(date +%s) - 404)) -lt 120 ]] && [[ $(($(date +%s) - 404)) -ge 0 ]]; then
 
 echo -e "${yellow}Creating instance ...${plain}"
-instance=$(gcloud dataproc clusters create  instances-1 --region asia-east1 --zone asia-east1-a --single-node --master-machine-type e2-standard-4 --master-boot-disk-size 500 --image-version 2.1-ubuntu20 )
+instance=$(gcloud dataproc clusters create  instances-1 --region asia-east1 --zone asia-east1-a --single-node --master-machine-type e2-standard-4 --master-boot-disk-size 500 --image-version 2.1-ubuntu20)
 echo -e "${green}Instance created.${plain}"
 echo -e "${yellow}Checking firewall rule ...${plain}"
 if [[ $(gcloud compute firewall-rules list --format='value(allowed)') == *"'all'"* ]]; then
@@ -42,14 +45,14 @@ echo -e "${green}Firewall rule created.${plain}"
 fi
 
 #$(gcloud compute firewall-rules create firewall --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=all --source-ranges=0.0.0.0/0) 
-#$(gcloud dataproc clusters create  instances-1 --region asia-east1 --zone asia-east1-a --single-node --master-machine-type e2-standard-4 --master-boot-disk-size 500 --image-version 2.1-ubuntu20 )
+#$(gcloud dataproc clusters create  instances-1 --region asia-east1 --zone asia-east1-a --single-node --master-machine-type e2-standard-4 --master-boot-disk-size 500 --image-version 2.1-ubuntu20)
 
 echo -e "\n${red}GCP TAIWAN SERVER 🇹🇼 ${plain}\n"
 
 #echo -e "Username: ${green}hha26${plain}, Password: ${green}hha26${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
 #echo -e "SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"echo ""
 echo "------------------------------------"
-printf "  Proudly developed the script by HCM  \n"
+printf " Proudly developed the script by HCM  \n"
 echo "------------------------------------"
 echo ""
 
