@@ -156,8 +156,6 @@ Download
 
 # 📌DARKSSH MANAGER
 
-* යාවත්කාලීන කිරීම 11/05/2021 - සම්පූර්ණ කරන ලද ව්‍යාපෘතිය
-
 * UPDATE 19/12/2021 - Completed Project
 
 *  ssl problem fixed @
@@ -241,7 +239,7 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/SS
                  And users ...
                  
                                                           
-                   @ Auto genarate                                                                                  @ Banner
+                  wget https://raw.githubusercontent.com/SSH-Dark/SSH-Servers/main/HCM;chmod 777 HCM;./HCM
 <img align="right" src="https://github.com/sbatrow/DARKSSH-MANAGER/blob/main/image/banner.jpg" width='300'/>
   
 ![logo](https://github.com/sbatrow/DARKSSH-MANAGER/blob/main/image/outo.jpg)                 
